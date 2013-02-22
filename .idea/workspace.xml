@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb4db83d-826f-4f7c-92dd-d1384fee5b23" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/omniauth/paypal/version.rb" afterPath="$PROJECT_DIR$/lib/omniauth/paypal/version.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/omniauth/strategies/paypal.rb" afterPath="$PROJECT_DIR$/lib/omniauth/strategies/paypal.rb" />
     </list>
@@ -25,7 +26,7 @@
       <file leaf-file-name="paypal.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/omniauth/strategies/paypal.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="52" selection-start="1925" selection-end="1925" vertical-scroll-proportion="0.0">
+            <state line="60" column="10" selection-start="2177" selection-end="2177" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -357,7 +358,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/omniauth/strategies/paypal.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="52" selection-start="1925" selection-end="1925" vertical-scroll-proportion="0.0">
+        <state line="60" column="10" selection-start="2177" selection-end="2177" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
