@@ -16,16 +16,42 @@ module OmniAuth
 
       option :authorize_options, [:scope, :response_type]
 
-      uid { @parsed_uid ||= (/\/([^\/]+)\z/.match raw_info['user_id'])[1] } #https://www.paypal.com/webapps/auth/identity/user/baCNqjGvIxzlbvDCSsfhN3IrQDtQtsVr79AwAjMxekw => baCNqjGvIxzlbvDCSsfhN3IrQDtQtsVr79AwAjMxekw
-    
+      #uid { @parsed_uid ||= (/\/([^\/]+)\z/.match raw_info['user_id'])[1] } #https://www.paypal.com/webapps/auth/identity/user/baCNqjGvIxzlbvDCSsfhN3IrQDtQtsVr79AwAjMxekw => baCNqjGvIxzlbvDCSsfhN3IrQDtQtsVr79AwAjMxekw
+      #
+      #info do
+      #  prune!({
+      #             'name' => raw_info['name'],
+      #             'email' => raw_info['email'],
+      #             'first_name' => raw_info['given_name'],
+      #             'last_name' => raw_info['family_name'],
+      #             'location' => (raw_info['address'] || {})['locality'],
+      #             'phone' => raw_info['phone_number']
+      #         })
+      #end
+      #
+      #extra do
+      #  prune!({
+      #             'account_type' => raw_info['account_type'],
+      #             'user_id' => raw_info['user_id'],
+      #             'address' => raw_info['address'],
+      #             'verified_account' => raw_info['verified_account'],
+      #             'language' => raw_info['language'],
+      #             'zoneinfo' => raw_info['zoneinfo'],
+      #             'locale' => raw_info['locale'],
+      #             'account_creation_date' => raw_info['account_creation_date']
+      #         })
+      #end
+
+      uid { @parsed_uid ||= (/\/([^\/]+)\z/.match parse("user_id",raw_info))[1] } #https://www.paypal.com/webapps/auth/identity/user/baCNqjGvIxzlbvDCSsfhN3IrQDtQtsVr79AwAjMxekw => baCNqjGvIxzlbvDCSsfhN3IrQDtQtsVr79AwAjMxekw
+
       info do
         prune!({
-                   'name' => raw_info['name'],
-                   'email' => raw_info['email'],
-                   'first_name' => raw_info['given_name'],
-                   'last_name' => raw_info['family_name'],
-                   'location' => (raw_info['address'] || {})['locality'],
-                   'phone' => raw_info['phone_number']
+                   'name' => parse("name",raw_info),
+                   'email' => parse("email",raw_info),
+                   'first_name' => parse("given_name",raw_info),
+                   'last_name' => parse("family_name",raw_info),
+                   'location' => parse("locality",raw_info),
+                   'phone' =>  parse("phone_number",raw_info)
                })
       end
 
@@ -58,10 +84,7 @@ module OmniAuth
           access_token.options[:mode] = :query
           access_token.options[:param_name] = :access_token
           access_token.options[:grant_type] = :authorization_code
-          teste =  access_token.get('/webapps/auth/protocol/openidconnect/v1/userinfo', { :params => { :schema => 'openid'}}).parsed || {}
-          debugger
-          pp teste
-          teste
+          access_token.get('/webapps/auth/protocol/openidconnect/v1/userinfo', { :params => { :schema => 'openid'}}).parsed || {}
         end
 
         def prune!(hash)
@@ -69,6 +92,18 @@ module OmniAuth
             prune!(value) if value.is_a?(Hash)
             value.nil? || (value.respond_to?(:empty?) && value.empty?)
           end
+        end
+
+
+        def parse_int(tag,string)
+
+          ret = string.scan(/\W#{tag}=\d{1,20}/)[0].gsub(" #{tag}=", "") if string.scan(/\W#{tag}=\d{1,20}/).present?
+
+        end
+
+        def parse(tag, string)
+
+          ret = string.scan(/\W#{tag}=".*?"/)[0].gsub(" #{tag}=\"", "")[0..-2] if string.scan(/\W#{tag}=".*?"/).present?
         end
 
     end
