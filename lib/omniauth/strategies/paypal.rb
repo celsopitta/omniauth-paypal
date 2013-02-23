@@ -58,7 +58,7 @@ module OmniAuth
       extra do
         prune!({
                    'account_type' => parse("account_type",raw_info),
-                   'user_id' => parse("user_id",raw_info),
+                   'user_id' => uid,
                    'city' => parse("locality",raw_info) ,
                    'state' => parse("region",raw_info) ,
                    'zip' => parse("postal_code",raw_info) ,

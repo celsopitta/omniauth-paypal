@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb4db83d-826f-4f7c-92dd-d1384fee5b23" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/omniauth/paypal/version.rb" afterPath="$PROJECT_DIR$/lib/omniauth/paypal/version.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/omniauth/strategies/paypal.rb" afterPath="$PROJECT_DIR$/lib/omniauth/strategies/paypal.rb" />
     </list>
@@ -25,7 +26,7 @@
       <file leaf-file-name="paypal.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/omniauth/strategies/paypal.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="25" selection-start="2626" selection-end="2626" vertical-scroll-proportion="0.0">
+            <state line="106" column="77" selection-start="4176" selection-end="4176" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -43,7 +44,7 @@
       <file leaf-file-name="version.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/omniauth/paypal/version.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="20" selection-start="52" selection-end="52" vertical-scroll-proportion="0.04601227">
+            <state line="4" column="79" selection-start="63" selection-end="63" vertical-scroll-proportion="0.09202454">
               <folding />
             </state>
           </provider>
@@ -62,8 +63,8 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/lib/omniauth/strategies/paypal.rb" />
         <option value="$PROJECT_DIR$/lib/omniauth/paypal/version.rb" />
+        <option value="$PROJECT_DIR$/lib/omniauth/strategies/paypal.rb" />
       </list>
     </option>
   </component>
@@ -357,14 +358,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/omniauth/strategies/paypal.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="25" selection-start="2626" selection-end="2626" vertical-scroll-proportion="0.0">
+        <state line="106" column="77" selection-start="4176" selection-end="4176" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/omniauth/paypal/version.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="20" selection-start="52" selection-end="52" vertical-scroll-proportion="0.04601227">
+        <state line="4" column="79" selection-start="63" selection-end="63" vertical-scroll-proportion="0.09202454">
           <folding />
         </state>
       </provider>
