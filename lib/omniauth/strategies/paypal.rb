@@ -108,6 +108,12 @@ module OmniAuth
         def parse(tag, string)
 
           ret = string.scan(/\W#{tag}=".*?"/)[0].gsub(" #{tag}=\"", "")[0..-2] if string.scan(/\W#{tag}=".*?"/).present?
+
+          if ret.blank?
+
+            ret = string.scan(/\"#{tag}\"=\"".*?"\"/)[0].gsub("\"#{tag}\"=\"", "")[0..-2] if string.scan(/\"#{tag}\"=".*?"/).present?
+          end
+
         end
 
     end

@@ -26,7 +26,7 @@
       <file leaf-file-name="paypal.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/omniauth/strategies/paypal.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="15" selection-start="3595" selection-end="3595" vertical-scroll-proportion="0.0">
+            <state line="113" column="118" selection-start="4283" selection-end="4283" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -358,7 +358,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/omniauth/strategies/paypal.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="15" selection-start="3595" selection-end="3595" vertical-scroll-proportion="0.0">
+        <state line="113" column="118" selection-start="4283" selection-end="4283" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
