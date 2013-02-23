@@ -50,7 +50,7 @@ module OmniAuth
                    'email' => parse("email",raw_info),
                    'first_name' => parse("given_name",raw_info),
                    'last_name' => parse("family_name",raw_info),
-                   'location' => parse("locality",raw_info),
+                   'location' => parse("locality",raw_info, "address"),
                    'phone' =>  parse("phone_number",raw_info)
                })
       end
@@ -59,11 +59,11 @@ module OmniAuth
         prune!({
                    'account_type' => parse("account_type",raw_info),
                    'user_id' => uid,
-                   'city' => parse("locality",raw_info) ,
-                   'state' => parse("region",raw_info) ,
-                   'zip' => parse("postal_code",raw_info) ,
-                   'street' => parse("street_address",raw_info) ,
-                   'country' => parse("country",raw_info) ,
+                   'city' => parse("locality",raw_info,"address") ,
+                   'state' => parse("region",raw_info,"address") ,
+                   'zip' => parse("postal_code",raw_info,"address") ,
+                   'street' => parse("street_address",raw_info,"address") ,
+                   'country' => parse("country",raw_info,"address") ,
                    'verified_account' => parse("verified_account",raw_info),
                    'language' => parse("language",raw_info),
                    'zoneinfo' => parse("zoneinfo",raw_info),
@@ -106,7 +106,22 @@ module OmniAuth
 
         end
 
-        def parse(tag, string)
+        def parse(tag, string, sub_tag=nil)
+
+          return nil if string.blank?
+
+          if string.is_a?(Hash)
+
+            if sub_tag.present?
+
+              ret = string[tag][sub_tag] if string[tag].present?
+            else
+              ret = string[tag]
+            end
+
+            return ret
+          end
+
 
           ret = string.scan(/\W#{tag}=".*?"/)[0].gsub(" #{tag}=\"", "")[0..-2] if string.scan(/\W#{tag}=".*?"/).present?
 
