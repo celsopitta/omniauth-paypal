@@ -57,14 +57,18 @@ module OmniAuth
 
       extra do
         prune!({
-                   'account_type' => raw_info['account_type'],
-                   'user_id' => raw_info['user_id'],
-                   'address' => raw_info['address'],
-                   'verified_account' => raw_info['verified_account'],
-                   'language' => raw_info['language'],
-                   'zoneinfo' => raw_info['zoneinfo'],
-                   'locale' => raw_info['locale'],
-                   'account_creation_date' => raw_info['account_creation_date']
+                   'account_type' => parse("account_type",raw_info),
+                   'user_id' => parse("user_id",raw_info),
+                   'city' => parse("locality",raw_info) ,
+                   'state' => parse("region",raw_info) ,
+                   'zip' => parse("postal_code",raw_info) ,
+                   'street' => parse("street_address",raw_info) ,
+                   'country' => parse("country",raw_info) ,
+                   'verified_account' => parse("verified_account",raw_info),
+                   'language' => parse("language",raw_info),
+                   'zoneinfo' => parse("zoneinfo",raw_info),
+                   'locale' => parse("locale",raw_info) ,
+                   'account_creation_date' => parse("account_creation_date",raw_info)
                })
       end
 
@@ -84,11 +88,8 @@ module OmniAuth
           access_token.options[:mode] = :query
           access_token.options[:param_name] = :access_token
           access_token.options[:grant_type] = :authorization_code
-          teste = access_token.get('/webapps/auth/protocol/openidconnect/v1/userinfo', { :params => { :schema => 'openid'}}).parsed || {}
-          pp teste
-          teste
-          debugger
-          teste
+          access_token.get('/webapps/auth/protocol/openidconnect/v1/userinfo', { :params => { :schema => 'openid'}}).parsed || {}
+
         end
 
         def prune!(hash)
