@@ -111,7 +111,7 @@ module OmniAuth
 
           if ret.blank?
 
-            ret = string.scan(/\"#{tag}\":\"".*?"\"/)[0].gsub("\"#{tag}\":\"", "")[0..-2] if string.scan(/\"#{tag}\":".*?"/).present?
+            ret = string.scan(/\"#{tag}\":.*?"/)[0].gsub("\"#{tag}\":\"", "")[0..-2] if string.scan(/\"#{tag}\":".*?"/).present?
           end
 
         end
