@@ -88,6 +88,7 @@ module OmniAuth
           pp teste
           teste
           debugger
+          teste
         end
 
         def prune!(hash)
