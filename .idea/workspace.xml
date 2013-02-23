@@ -25,7 +25,7 @@
       <file leaf-file-name="paypal.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/omniauth/strategies/paypal.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="46" selection-start="3174" selection-end="3174" vertical-scroll-proportion="0.0">
+            <state line="88" column="15" selection-start="3560" selection-end="3560" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -43,7 +43,7 @@
       <file leaf-file-name="version.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/omniauth/paypal/version.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="20" selection-start="52" selection-end="52" vertical-scroll-proportion="0.04601227">
+            <state line="2" column="21" selection-start="53" selection-end="53" vertical-scroll-proportion="0.04601227">
               <folding />
             </state>
           </provider>
@@ -357,14 +357,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/omniauth/strategies/paypal.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="46" selection-start="3174" selection-end="3174" vertical-scroll-proportion="0.0">
+        <state line="88" column="15" selection-start="3560" selection-end="3560" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/omniauth/paypal/version.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="20" selection-start="52" selection-end="52" vertical-scroll-proportion="0.04601227">
+        <state line="2" column="21" selection-start="53" selection-end="53" vertical-scroll-proportion="0.04601227">
           <folding />
         </state>
       </provider>
