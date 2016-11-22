@@ -1,6 +1,5 @@
 #encoding: utf-8
 require 'omniauth-oauth2'
-require 'debugger'
 
 module OmniAuth
   module Strategies
