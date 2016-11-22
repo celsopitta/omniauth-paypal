@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb4db83d-826f-4f7c-92dd-d1384fee5b23" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/omniauth-paypal.gemspec" afterPath="$PROJECT_DIR$/omniauth-paypal.gemspec" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/omniauth/paypal/version.rb" afterPath="$PROJECT_DIR$/lib/omniauth/paypal/version.rb" />
     </list>
     <ignored path="omniauth-paypal.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,20 +47,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="omniauth-paypal.gemspec" pinned="false" current-in-tab="true">
+      <file leaf-file-name="omniauth-paypal.gemspec" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/omniauth-paypal.gemspec">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40605095" vertical-offset="0" max-vertical-offset="628">
+            <state vertical-scroll-proportion="-10.2" vertical-offset="0" max-vertical-offset="405">
               <caret line="17" column="53" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="version.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="version.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/omniauth/paypal/version.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.2" vertical-offset="0" max-vertical-offset="150">
+            <state vertical-scroll-proportion="0.0477707" vertical-offset="0" max-vertical-offset="628">
               <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
               <folding />
             </state>
@@ -82,9 +80,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/lib/omniauth/paypal/version.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/omniauth-paypal.gemspec" />
+        <option value="$PROJECT_DIR$/lib/omniauth/paypal/version.rb" />
       </list>
     </option>
   </component>
@@ -454,14 +452,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/omniauth/paypal/version.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.2" vertical-offset="0" max-vertical-offset="150">
-          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.4" vertical-offset="0" max-vertical-offset="165">
@@ -472,8 +462,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/omniauth-paypal.gemspec">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40605095" vertical-offset="0" max-vertical-offset="628">
+        <state vertical-scroll-proportion="-10.2" vertical-offset="0" max-vertical-offset="405">
           <caret line="17" column="53" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/omniauth/paypal/version.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0477707" vertical-offset="0" max-vertical-offset="628">
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
           <folding />
         </state>
       </provider>
